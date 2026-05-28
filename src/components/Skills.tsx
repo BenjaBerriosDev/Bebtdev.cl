@@ -1,4 +1,4 @@
-import { skillCategories } from "../data/portfolio";
+import { skillCategories, about } from "../data/portfolio";
 
 export function Skills() {
   return (
@@ -17,7 +17,7 @@ export function Skills() {
           {skillCategories.map((category) => (
             <div
               key={category.name}
-              className="glass card-hover rounded-xl p-6"
+              className="glass rounded-xl p-6"
             >
               <h3 className="mb-4 text-lg font-semibold text-white">
                 {category.name}
@@ -35,6 +35,11 @@ export function Skills() {
             </div>
           ))}
         </div>
+
+        <p className="mt-8 text-sm text-slate-500">
+          Aprendiendo ahora:{" "}
+          <span className="text-slate-300">{about.learningNow.join(" · ")}</span>
+        </p>
       </div>
     </section>
   );

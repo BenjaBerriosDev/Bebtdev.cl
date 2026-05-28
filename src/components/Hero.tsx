@@ -14,9 +14,10 @@ export function Hero() {
           {brand.domain}
         </p>
 
-        {profile.available && (          <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+        {profile.available && (
+          <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-            Disponible para nuevas oportunidades
+            {profile.availabilityLabel}
           </div>
         )}
 
@@ -54,14 +55,25 @@ export function Hero() {
           >
             LinkedIn →
           </a>
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg px-4 py-3 text-sm text-slate-400 transition-colors hover:text-brand-400"
+          >
+            GitHub →
+          </a>
         </div>
 
-        <p className="animate-fade-up animation-delay-400 mt-12 flex items-center gap-2 text-sm text-slate-500">
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          {profile.location}
+        <p className="animate-fade-up animation-delay-400 mt-12 flex flex-col gap-2 text-sm text-slate-500 sm:flex-row sm:items-center sm:gap-6">
+          <span className="flex items-center gap-2">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            {profile.location}
+          </span>
+          <span>{profile.languages}</span>
         </p>
       </div>
     </section>

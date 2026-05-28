@@ -14,7 +14,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass shadow-lg shadow-black/20" : "bg-transparent"
+        scrolled ? "glass-nav shadow-lg shadow-black/20" : "glass-nav"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -62,7 +62,7 @@ export function Header() {
       </nav>
 
       {menuOpen && (
-        <div className="glass border-t border-slate-800 px-6 py-4 md:hidden">
+        <div className="glass-nav border-t border-slate-800 px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>

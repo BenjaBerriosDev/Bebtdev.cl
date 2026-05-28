@@ -2,24 +2,27 @@ export const brand = {
   name: "bebtdev",
   domain: "bebtdev.cl",
   url: "https://bebtdev.cl",
-  meaning: "Benjamín Berríos Troncoso · Desarrollo",
+  meaning: "BEnjamin Berrios Troncoso DEV",
 };
 
 export const profile = {
   name: "Benjamín Berríos Troncoso",
-  title: "Consultor SAP Junior · Desarrollo Web",
+  title: "Desarrollador Full Stack - Consultor SAP Junior",
   tagline:
-    "Desarrollo soluciones digitales y aplicaciones web mientras consulto SAP Business One en entornos empresariales reales.",
+    "Ingeniero en Computación e Informática (UNAB 2025). Desarrollador full stack y consultor SAP junior en entornos productivos.",
   location: "Santiago, Chile",
   email: "benjamin.berrios.troncoso@gmail.com",
   linkedin: "https://www.linkedin.com/in/benjam%C3%ADn-berr%C3%ADos-b35254310",
+  github: "https://github.com/BenjaBerriosDev",
+  languages: "Español nativo · Inglés (ver nivel en LinkedIn)",
   available: true,
+  availabilityLabel: "Buscando trabajo activamente",
 };
 
 export const about = {
   paragraphs: [
-    "Soy consultor SAP Junior en TRAVERSO S.A., donde combino consultoría en SAP Business One con desarrollo de soluciones web para la operación interna de la empresa.",
-    "Trabajo con Next.js, React, TypeScript y .NET, integrando SAP Service Layer, SQL Server y Microsoft Entra ID para construir plataformas corporativas y aplicaciones interactivas.",
+    "Ingeniero en Computación e Informática titulado en la UNAB (2025). Consultor SAP Junior en TRAVERSO S.A., con foco en soporte productivo y desarrollo full stack.",
+    "Lidero un equipo de 3 personas en la intranet corporativa. Experiencia con Next.js, React, .NET Core, SAP HANA, Workato, DI API y Crystal Reports.",
   ],
   highlights: [
     { label: "Experiencia laboral", value: "6 meses" },
@@ -27,6 +30,7 @@ export const about = {
     { label: "Empresa actual", value: "TRAVERSO" },
     { label: "Ubicación", value: "Chile" },
   ],
+  learningNow: ["Golang"],
 };
 
 export type SkillCategory = {
@@ -37,19 +41,34 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     name: "SAP Business One",
-    skills: ["Consultoría funcional", "Service Layer", "Query Manager", "Reportes", "Soporte a usuarios"],
+    skills: [
+      "Todos los módulos",
+      "Service Layer",
+      "DI API",
+      "SAP HANA",
+      "Workato",
+      "Crystal Reports",
+      "Soporte en producción",
+    ],
   },
   {
-    name: "Frontend",
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Electron", "Vite"],
+    name: "Full Stack",
+    skills: [
+      "C# · .NET Core 8",
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Node.js",
+      "Python",
+    ],
   },
   {
-    name: "Backend & Datos",
-    skills: ["ASP.NET Core", "SQL Server", "REST APIs", "NextAuth.js", "Azure AD / Entra ID", "axios"],
+    name: "Bases de Datos",
+    skills: ["SQL Server", "SAP HANA", "Consultas SQL", "Resolución de incidencias"],
   },
   {
     name: "Herramientas",
-    skills: ["Git", "GitHub", "Recharts", "Zod", "Microsoft Graph", "Metodologías ágiles"],
+    skills: ["Git / GitHub", "Azure AD / Entra ID", "Electron", "Metodologías ágiles"],
   },
 ];
 
@@ -65,44 +84,45 @@ export const projects: Project[] = [
   {
     title: "Intranet Corporativa — TRAVERSO S.A.",
     description:
-      "Plataforma interna con autenticación Microsoft Entra ID, gestión de roles (RBAC) e integración con SAP Business One Service Layer. Incluye módulos de Ventas, Compras, Inventario, RR.HH. y administración de usuarios.",
+      "Plataforma interna con Microsoft Entra ID, RBAC e integración con SAP B1 Service Layer. Lidero un equipo de 3 personas en su desarrollo.",
     tags: [
       "Next.js 16",
       "React 19",
       "TypeScript",
-      "Tailwind CSS",
       "NextAuth.js",
       "SAP B1",
       "SQL Server",
+      ".NET Core",
     ],
     highlights: [
-      "Login con Microsoft Entra ID y control de acceso por roles",
-      "Integración con SAP Service Layer para documentos y adjuntos",
-      "Dashboard modular con administración de usuarios y auditoría",
-      "Backend complementario en ASP.NET Core (DocumentosAPI)",
+      "Módulo de logística en producción",
+      "Módulo de ventas en desarrollo activo",
+      "Integración con SAP Service Layer y API .NET (DocumentosAPI)",
+      "Liderazgo de equipo de 3 desarrolladores",
     ],
   },
   {
-    title: "Last.fm Wrapped — App de escritorio en tiempo real",
+    title: "Last.fm Wrapped — App de escritorio",
     description:
-      "Aplicación de escritorio inspirada en Spotify Wrapped que consume la API de Last.fm para mostrar estadísticas musicales mensuales y anuales, con actualización en vivo del track en reproducción.",
+      "Proyecto personal: aplicación de escritorio inspirada en Spotify Wrapped con datos de Last.fm en tiempo real. Incluye instalador para distribución.",
     tags: ["Electron", "React", "TypeScript", "Vite", "Recharts", "Last.fm API"],
     highlights: [
-      "Wrapped interactivo con top artistas, canciones y álbumes por período",
-      "Polling en tiempo real cada 10 s del track en reproducción",
-      "Gráficos con Recharts y exportación de resumen a imagen",
-      "Empaquetado multiplataforma con electron-builder",
+      "Wrapped interactivo con top artistas, canciones y álbumes",
+      "Actualización en vivo del track en reproducción",
+      "Exportación de resumen a imagen",
+      "Instalador multiplataforma con electron-builder",
     ],
   },
   {
-    title: "Tienda web de decants",
+    title: "TuDecant.cl — Tienda de decants",
     description:
-      "Sitio web orientado a la venta de decants de perfumes, con catálogo de productos y experiencia de compra pensada para el cliente final.",
-    tags: ["Desarrollo Web", "E-commerce", "Catálogo", "Frontend"],
+      "Proyecto propio en desarrollo temprano: e-commerce de decants de perfumes. Frontend funcional en fase inicial, sin sitio publicado aún.",
+    tags: ["React", "TypeScript", "Node.js", "E-commerce"],
     highlights: [
-      "Catálogo de productos para comercialización de decants",
-      "Experiencia de compra orientada al cliente final",
-      "Diseño enfocado en presentación de productos y conversión",
+      "Marca registrada: TuDecant.cl",
+      "Frontend en desarrollo activo",
+      "Arquitectura pensada para catálogo y venta online",
+      "Proyecto personal desde cero",
     ],
   },
 ];
@@ -121,14 +141,20 @@ export const experience: Experience[] = [
     company: "TRAVERSO S.A.",
     period: "Dic 2025 — Presente",
     description:
-      "Consultoría en SAP Business One y desarrollo de la intranet corporativa con Next.js, integrada a SAP Service Layer y Microsoft Entra ID.",
+      "Soporte y mantenimiento de SAP Business One y SAP HANA en producción, resolución de incidencias en SQL Server y desarrollo de la intranet corporativa.",
     achievements: [
-      "Creación y desarrollo de la intranet corporativa de TRAVERSO S.A.",
-      "Implementación de autenticación Azure AD y gestión de roles por módulo",
-      "Integración con SAP B1 Service Layer y API .NET para documentos",
+      "Liderazgo de equipo de 3 personas en la intranet corporativa",
+      "Soporte SAP B1 y HANA en ambiente productivo",
+      "Integración Service Layer, Workato, DI API y Crystal Reports",
     ],
   },
 ];
+
+export const education = {
+  degree: "Ingeniero en Computación e Informática",
+  institution: "Universidad Andrés Bello (UNAB)",
+  year: "2025",
+};
 
 export const certificationsLinkedIn =
   "https://www.linkedin.com/in/benjam%C3%ADn-berr%C3%ADos-b35254310/details/certifications/";
