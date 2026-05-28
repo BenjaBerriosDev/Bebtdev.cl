@@ -1,4 +1,5 @@
 import { projects } from "../data/portfolio";
+import { BulletList } from "./BulletList";
 
 export function Projects() {
   return (
@@ -20,12 +21,12 @@ export function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className={`glass card-hover flex flex-col rounded-xl p-6 ${
+              className={`glass card-hover flex flex-col rounded-xl p-6 sm:p-7 ${
                 index === 0 ? "lg:col-span-2 lg:flex-row lg:gap-8" : ""
               }`}
             >
               <div className={index === 0 ? "lg:flex-1" : ""}>
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                <h3 className="text-xl font-bold leading-snug text-white">{project.title}</h3>
                 <p className="mt-3 leading-relaxed text-slate-400">
                   {project.description}
                 </p>
@@ -46,17 +47,7 @@ export function Projects() {
                 <p className="mb-3 text-xs font-semibold tracking-wider text-slate-500 uppercase">
                   Resultados clave
                 </p>
-                <ul className="space-y-2">
-                  {project.highlights.map((highlight) => (
-                    <li
-                      key={highlight}
-                      className="flex items-start gap-2 text-sm text-slate-300"
-                    >
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
+                <BulletList items={project.highlights} variant="emerald" className="mt-0" />
 
                 <div className="mt-5 flex gap-4">
                   {project.link && (

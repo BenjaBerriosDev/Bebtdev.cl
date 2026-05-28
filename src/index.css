@@ -53,6 +53,19 @@ body {
   border-bottom: 1px solid rgba(148, 163, 184, 0.1);
 }
 
+.bullet-dot {
+  margin-top: 0.55em;
+  height: 0.375rem;
+  width: 0.375rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: #60a5fa;
+}
+
+.bullet-dot--emerald {
+  background-color: #34d399;
+}
+
 .card-hover {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }

@@ -13,8 +13,8 @@ export function About() {
           </h2>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-5">
-          <div className="space-y-5 lg:col-span-3">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start lg:gap-12">
+          <div className="space-y-5">
             {about.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 40)} className="text-lg leading-relaxed text-slate-400">
                 {paragraph}
@@ -22,14 +22,18 @@ export function About() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4 lg:col-span-2">
+          <div className="grid grid-cols-2 gap-4">
             {about.highlights.map((item) => (
               <div
                 key={item.label}
-                className="glass flex min-h-[7.5rem] flex-col items-center justify-center rounded-xl p-6 text-center"
+                className="glass flex aspect-square max-h-36 flex-col items-center justify-center rounded-xl p-4 text-center sm:max-h-none sm:min-h-[7.5rem] sm:p-6"
               >
-                <p className="text-xl font-bold text-brand-400 sm:text-3xl">{item.value}</p>
-                <p className="mt-1 text-sm text-slate-500">{item.label}</p>
+                <p className="text-xl font-bold leading-none text-brand-400 sm:text-3xl">
+                  {item.value}
+                </p>
+                <p className="mt-2 text-xs leading-snug text-slate-500 sm:mt-3 sm:text-sm">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
