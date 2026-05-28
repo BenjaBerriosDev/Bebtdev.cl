@@ -3,9 +3,9 @@ import { BulletList } from "./BulletList";
 
 export function Projects() {
   return (
-    <section id="proyectos" className="px-6 py-24">
+    <section id="proyectos" className="px-6 py-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12">
+        <div className="mb-8">
           <p className="mb-2 text-sm font-semibold tracking-widest text-brand-400 uppercase">
             Proyectos
           </p>

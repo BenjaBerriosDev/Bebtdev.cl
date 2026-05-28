@@ -7,7 +7,7 @@ export const brand = {
 
 export const profile = {
   name: "Benjamín Berríos Troncoso",
-  title: "Consultor SAP Nivel 1 / Desarrollador Full-Stack",
+  title: "Consultor SAP Junior / Desarrollador Full-Stack",
   tagline:
     "Ingeniero en Computación e Informática (UNAB 2025). Experiencia en SAP B1 y HANA productivo, integraciones y desarrollo web.",
   location: "Santiago, Chile",
@@ -21,9 +21,8 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "Ingeniero en Computación e Informática titulado en la UNAB (2025). Consultor SAP Nivel 1 y desarrollador full stack en TRAVERSO S.A., con foco en soporte productivo, integraciones y desarrollo de software.",
-    "Lidero un equipo de 3 personas en la intranet corporativa. Experiencia con Next.js, React, .NET Core, SAP HANA, Service Layer, Workato, DI API y Crystal Reports. Interés en ciberseguridad e inteligencia artificial.",
-    "Proyecto de titulación: sistema de gestión aduanera para Chile con 95% de aprobación. Certificaciones en redes (CCNA), ciberseguridad (CyberOps), IA (Anthropic, IBM) y formación internacional.",
+    "Ingeniero en Computación e Informática graduado en la UNAB (2025). Consultor SAP Junior y desarrollador full stack en TRAVERSO S.A., con foco en soporte productivo, integraciones y desarrollo de software.",
+    "Parte del equipo de 3 personas en la intranet corporativa, con rol de liderazgo en desarrollo. Experiencia con Next.js, React, .NET Core, SAP HANA, Service Layer, Workato, DI API y Crystal Reports. Certificaciones en redes (CCNA), ciberseguridad (CyberOps), IA (Anthropic, IBM) y formación internacional.",
   ],
   highlights: [
     { label: "Experiencia laboral", value: "6 meses" },
@@ -85,7 +84,7 @@ export const projects: Project[] = [
   {
     title: "Intranet Corporativa — TRAVERSO S.A.",
     description:
-      "Plataforma interna con Microsoft Entra ID, RBAC híbrido (Azure AD + SQL) e integración con SAP B1 Service Layer. Lidero un equipo de 3 personas en su desarrollo.",
+      "Plataforma interna con Microsoft Entra ID, RBAC híbrido (Azure AD + SQL) e integración con SAP B1 Service Layer. Desarrollo en equipo de 3 personas, con rol de liderazgo.",
     tags: [
       "Next.js 16",
       "React 19",
@@ -138,29 +137,17 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "Consultor SAP Nivel 1 / Desarrollador Full-Stack",
+    role: "Consultor SAP Junior / Desarrollador Full-Stack",
     company: "TRAVERSO S.A.",
     period: "Dic 2025 — Presente",
     description:
       "Soporte y mantenimiento de SAP Business One y SAP HANA en producción, resolución de incidencias en SQL Server y desarrollo de la intranet corporativa.",
     achievements: [
-      "Liderazgo de equipo de 3 personas en la intranet corporativa",
+      "Parte del equipo de 3 personas en la intranet, con rol de liderazgo en desarrollo",
       "Soporte SAP B1 y HANA en ambiente productivo con resolución de incidencias",
       "Integración Service Layer, Workato, DI API y Crystal Reports",
       "RBAC híbrido Azure AD + SQL Server y trazabilidad de auditoría",
       "Migración de integraciones Workato hacia servicios .NET Core",
-    ],
-  },
-  {
-    role: "Consultor SAP Nivel 1 / Desarrollador (Práctica Profesional)",
-    company: "TRAVERSO S.A.",
-    period: "2025 · 351 horas",
-    description:
-      "Práctica profesional universitaria en consultoría SAP y desarrollo full stack dentro del equipo de TRAVERSO S.A.",
-    achievements: [
-      "Soporte operativo de SAP Business One en ambiente productivo",
-      "Desarrollo de módulos para la intranet corporativa",
-      "Integración con SAP Service Layer y bases SQL Server",
     ],
   },
 ];
@@ -168,7 +155,7 @@ export const experience: Experience[] = [
 export const education = {
   degree: "Ingeniero en Computación e Informática",
   institution: "Universidad Andrés Bello (UNAB)",
-  period: "Titulado 2025",
+  period: "2025",
 };
 
 export const certificationsLinkedIn =

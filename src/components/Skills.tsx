@@ -2,9 +2,9 @@ import { skillCategories, about } from "../data/portfolio";
 
 export function Skills() {
   return (
-    <section id="habilidades" className="px-6 py-24">
+    <section id="habilidades" className="px-6 py-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12">
+        <div className="mb-8">
           <p className="mb-2 text-sm font-semibold tracking-widest text-brand-400 uppercase">
             Habilidades
           </p>
@@ -36,7 +36,7 @@ export function Skills() {
           ))}
         </div>
 
-        <p className="mt-8 text-sm text-slate-500">
+        <p className="mt-6 text-sm text-slate-500">
           Aprendiendo ahora:{" "}
           <span className="text-slate-300">{about.learningNow.join(" · ")}</span>
         </p>

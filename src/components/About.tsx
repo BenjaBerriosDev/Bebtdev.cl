@@ -2,9 +2,9 @@ import { about } from "../data/portfolio";
 
 export function About() {
   return (
-    <section id="sobre-mi" className="px-6 py-24">
+    <section id="sobre-mi" className="px-6 py-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12">
+        <div className="mb-8">
           <p className="mb-2 text-sm font-semibold tracking-widest text-brand-400 uppercase">
             Sobre mí
           </p>
@@ -13,7 +13,7 @@ export function About() {
           </h2>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start lg:gap-12">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start lg:gap-10">
           <div className="space-y-5">
             {about.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 40)} className="text-lg leading-relaxed text-slate-400">
@@ -22,11 +22,11 @@ export function About() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 auto-rows-fr">
             {about.highlights.map((item) => (
               <div
                 key={item.label}
-                className="glass flex aspect-square max-h-36 flex-col items-center justify-center rounded-xl p-4 text-center sm:max-h-none sm:min-h-[7.5rem] sm:p-6"
+                className="glass flex min-h-[7.5rem] flex-col items-center justify-center rounded-xl p-4 text-center sm:min-h-[8.5rem] sm:p-6"
               >
                 <p className="text-xl font-bold leading-none text-brand-400 sm:text-3xl">
                   {item.value}

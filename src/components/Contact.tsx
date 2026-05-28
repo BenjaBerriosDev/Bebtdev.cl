@@ -2,7 +2,7 @@ import { profile, certificationsLinkedIn } from "../data/portfolio";
 
 export function Contact() {
   return (
-    <section id="contacto" className="px-6 py-24">
+    <section id="contacto" className="px-6 py-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <div className="glass relative overflow-hidden rounded-2xl p-5 sm:p-8 lg:p-12">
           <div className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-brand-600/20 blur-3xl" />
