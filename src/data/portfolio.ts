@@ -9,12 +9,12 @@ export const profile = {
   name: "Benjamín Berríos Troncoso",
   title: "Desarrollador Full Stack - Consultor SAP Junior",
   tagline:
-    "Ingeniero en Computación e Informática (UNAB 2025). Desarrollador full stack y consultor SAP junior en entornos productivos.",
+    "Ingeniero en Computación e Informática (UNAB 2025). Experiencia en entornos productivos con SAP B1, HANA y desarrollo web.",
   location: "Santiago, Chile",
   email: "benjamin.berrios.troncoso@gmail.com",
   linkedin: "https://www.linkedin.com/in/benjam%C3%ADn-berr%C3%ADos-b35254310",
   github: "https://github.com/BenjaBerriosDev",
-  languages: "Español nativo · Inglés (ver nivel en LinkedIn)",
+  languages: "Español nativo · Inglés B2",
   available: true,
   availabilityLabel: "Buscando trabajo activamente",
 };
