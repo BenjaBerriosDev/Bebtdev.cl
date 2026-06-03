@@ -49,13 +49,24 @@ export function Projects() {
                 </p>
                 <BulletList items={project.highlights} variant="emerald" className="mt-0" />
 
-                <div className="mt-5 flex gap-4">
+                <div className="mt-5 flex flex-wrap gap-4">
+                  {project.downloadLink && (
+                    <a
+                      href={project.downloadLink}
+                      download
+                      className="rounded-lg bg-brand-600/20 px-3 py-1.5 text-sm font-semibold text-brand-300 transition-colors hover:bg-brand-600/30 hover:text-brand-200"
+                    >
+                      Descargar instalador →
+                    </a>
+                  )}
                   {project.link && (
                     <a
                       href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm font-medium text-brand-400 hover:text-brand-300"
                     >
-                      Ver detalle →
+                      Código en GitHub →
                     </a>
                   )}
                 </div>
