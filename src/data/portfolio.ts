@@ -77,7 +77,10 @@ export type Project = {
   description: string;
   tags: string[];
   highlights: string[];
+  /** Repositorio, demo web, etc. */
   link?: string;
+  /** Instalador o build listo para probar (p. ej. GitHub Releases). */
+  downloadLink?: string;
 };
 
 export const projects: Project[] = [
@@ -106,6 +109,7 @@ export const projects: Project[] = [
     description:
       "Proyecto personal: aplicación de escritorio inspirada en Spotify Wrapped con datos de Last.fm en tiempo real. Incluye instalador para distribución.",
     tags: ["Electron", "React", "TypeScript", "Vite", "Recharts", "Last.fm API"],
+    downloadLink: "/downloads/Lastfm-Wrapped-Setup-1.0.0.exe",
     highlights: [
       "Wrapped interactivo con top artistas, canciones y álbumes",
       "Actualización en vivo del track en reproducción",
