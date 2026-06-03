@@ -21,8 +21,8 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "Ingeniero en Computación e Informática graduado en la UNAB (2025). Consultor SAP Junior y desarrollador full stack en TRAVERSO S.A., con foco en soporte productivo, integraciones y desarrollo de software.",
-    "Parte del equipo de 3 personas en la intranet corporativa, con rol de liderazgo en desarrollo. Experiencia con Next.js, React, .NET Core, SAP HANA, Service Layer, Workato, DI API y Crystal Reports. Certificaciones en redes (CCNA), ciberseguridad (CyberOps), IA (Anthropic, IBM) y formación internacional.",
+    "Ingeniero en Computación e Informática titulado de la UNAB. Consultor SAP Junior y desarrollador full stack en TRAVERSO S.A., enfoque en soporte productivo, integraciones y desarrollo de software.",
+    "Parte del equipo de 3 personas en la intranet corporativa, con rol de liderazgo en desarrollo. Experiencia con Next.js, React, .NET Core, SAP HANA, Service Layer, Workato, DI API y Crystal Reports. Cuento con certificaciones SAP, CCNA, ciberseguridad CyberOps, IA (Anthropic, IBM) y formación internacional.",
   ],
   highlights: [
     { label: "Experiencia laboral", value: "6 meses" },
@@ -54,7 +54,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Full Stack",
     skills: [
-      "C# · .NET Core 8",
+      "C# .NET Core 8",
       "Next.js 16",
       "React 19",
       "TypeScript",
@@ -77,17 +77,15 @@ export type Project = {
   description: string;
   tags: string[];
   highlights: string[];
-  /** Repositorio, demo web, etc. */
   link?: string;
-  /** Instalador o build listo para probar (p. ej. GitHub Releases). */
   downloadLink?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "Intranet Corporativa — TRAVERSO S.A.",
+    title: "Intranet Corporativa, TRAVERSO S.A.",
     description:
-      "Plataforma interna con Microsoft Entra ID, RBAC híbrido (Azure AD + SQL) e integración con SAP B1 Service Layer. Desarrollo en equipo de 3 personas, con rol de liderazgo.",
+      "Plataforma interna con Microsoft Entra ID, RBAC híbrido (Azure AD + SQL), integración con SAP B1 Service Layer y MVC. Desarrollo en equipo de 3 personas, con rol de liderazgo.",
     tags: [
       "Next.js 16",
       "React 19",
@@ -105,22 +103,22 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Last.fm Wrapped — App de escritorio",
+    title: "Last.fm Wrapped, App de escritorio",
     description:
-      "Proyecto personal: aplicación de escritorio inspirada en Spotify Wrapped con datos de Last.fm en tiempo real. Incluye instalador para distribución.",
+      "Es una aplicación de escritorio inspirada en Spotify Wrapped con datos de Last.fm en tiempo real para poder visualizar la musica que escucho el usuario. Incluye instalador en Windows para prueba.",
     tags: ["Electron", "React", "TypeScript", "Vite", "Recharts", "Last.fm API"],
     downloadLink: "/downloads/Lastfm-Wrapped-Setup-1.0.0.exe",
     highlights: [
-      "Wrapped interactivo con top artistas, canciones y álbumes",
-      "Actualización en vivo del track en reproducción",
-      "Exportación de resumen a imagen",
-      "Instalador multiplataforma con electron-builder",
+      "Wrapped interactivo con top artistas, canciones, álbumes y canciones que escuchar poco dentro de tu top",
+      "Muestra reproducciones totales, Artista, Canción y Album en tu Top 1",
+      "Actualización cada 10s en vivo de la cancion en reproducción",
+      "Instalador Windows con electron-builder",
     ],
   },
   {
-    title: "TuDecant.cl — Tienda de decants",
+    title: "TuDecant.cl, Tienda decants",
     description:
-      "Proyecto propio en desarrollo temprano: e-commerce de decants de perfumes. Frontend funcional en fase inicial, sin sitio publicado aún.",
+      "E-commerce de decants de perfumes, frontend funcional en fase inicial, sin sitio publicado aún.",
     tags: ["React", "TypeScript", "Node.js", "E-commerce"],
     highlights: [
       "Marca registrada: TuDecant.cl",
@@ -145,7 +143,7 @@ export const experience: Experience[] = [
     company: "TRAVERSO S.A.",
     period: "Dic 2025 — Presente",
     description:
-      "Soporte y mantenimiento de SAP Business One y SAP HANA en producción, resolución de incidencias en SQL Server y desarrollo de la intranet corporativa.",
+      "Soporte y mantenimiento de SAP Business One y SAP HANA en producción, resolución de incidencias en SQL Server y desarrollo de intranet corporativa.",
     achievements: [
       "Parte del equipo de 3 personas en la intranet, con rol de liderazgo en desarrollo",
       "Soporte SAP B1 y HANA en ambiente productivo con resolución de incidencias",
@@ -158,8 +156,8 @@ export const experience: Experience[] = [
 
 export const education = {
   degree: "Ingeniero en Computación e Informática",
-  institution: "Universidad Andrés Bello (UNAB)",
-  period: "2025",
+  institution: "Universidad Andrés Bello",
+  period: "2022-2025",
 };
 
 export const certificationsLinkedIn =
