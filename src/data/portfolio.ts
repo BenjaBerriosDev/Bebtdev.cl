@@ -7,6 +7,11 @@ export const brand = {
 
 export const profile = {
   name: "Benjamín Berríos Troncoso",
+  photo: "/profile.png",
+  photoAlt: "Benjamín Berríos Troncoso — consultor SAP y desarrollador full stack",
+  /** Recorte circular: zoom en rostro, encuadre vertical */
+  photoPosition: "center 94%",
+  photoScale: 1.35,
   title: "Consultor SAP Junior / Desarrollador Full-Stack",
   tagline:
     "Ingeniero en Computación e Informática (UNAB 2025). Experiencia en SAP B1 y HANA productivo, integraciones y desarrollo web.",
@@ -25,10 +30,10 @@ export const about = {
     "Parte del equipo de 3 personas en la intranet corporativa, con rol de liderazgo en desarrollo. Experiencia con Next.js, React, .NET Core, SAP HANA, Service Layer, Workato, DI API y Crystal Reports. Cuento con certificaciones SAP, CCNA, ciberseguridad CyberOps, IA (Anthropic, IBM) y formación internacional.",
   ],
   highlights: [
-    { label: "Experiencia laboral", value: "6 meses" },
-    { label: "Proyectos destacados", value: "3" },
-    { label: "Empresa actual", value: "TRAVERSO" },
-    { label: "Ubicación", value: "Chile" },
+    { label: "Experiencia laboral", value: "6 meses", href: "#experiencia" },
+    { label: "Proyectos destacados", value: "3", href: "#proyectos" },
+    { label: "Empresa actual", value: "TRAVERSO", href: "#experiencia" },
+    { label: "Ubicación", value: "Chile", href: "#contacto" },
   ],
   learningNow: ["Golang"],
 };
