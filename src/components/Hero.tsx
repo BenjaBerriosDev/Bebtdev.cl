@@ -21,8 +21,7 @@ function ProfileCard({ className = "" }: { className?: string }) {
             fetchPriority="high"
           />
         </div>
-        <p className="mt-6 text-center text-sm font-medium text-slate-300">Resumen rápido</p>
-        <dl className="mt-4 grid grid-cols-2 gap-3">
+        <dl className="mt-6 grid grid-cols-2 gap-3">
           {about.highlights.map((item) => (
             <a
               key={item.label}
