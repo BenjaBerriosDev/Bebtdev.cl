@@ -1,9 +1,20 @@
 import { useState, useEffect } from "react";
 import { navLinks, brand } from "../data/portfolio";
+import { useActiveSection } from "../context/ActiveSectionContext";
+
+const activeLinkClass: Record<string, string> = {
+  inicio: "text-white",
+  "sobre-mi": "text-violet-300",
+  habilidades: "text-cyan-300",
+  proyectos: "text-emerald-300",
+  experiencia: "text-amber-300",
+  contacto: "text-brand-300",
+};
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const activeId = useActiveSection();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -23,17 +34,28 @@ export function Header() {
           <span className="text-brand-400">dev</span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-slate-400 transition-colors hover:text-white"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+        <ul className="hidden items-center gap-6 lg:flex">
+          {navLinks.map((link) => {
+            const id = link.href.replace("#", "");
+            const isActive = id === activeId;
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`relative text-sm transition-colors ${
+                    isActive
+                      ? `${activeLinkClass[id] ?? "text-white"} font-semibold`
+                      : "text-slate-400 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-current opacity-80" />
+                  )}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <a
@@ -45,7 +67,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex flex-col gap-1.5 md:hidden"
+          className="flex flex-col gap-1.5 lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Abrir menú"
         >
@@ -62,19 +84,23 @@ export function Header() {
       </nav>
 
       {menuOpen && (
-        <div className="glass-nav border-t border-slate-800 px-6 py-4 md:hidden">
+        <div className="glass-nav border-t border-slate-800 px-6 py-4 lg:hidden">
           <ul className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block text-slate-300 hover:text-white"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const id = link.href.replace("#", "");
+              const isActive = id === activeId;
+              return (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className={`block ${isActive ? "font-semibold text-white" : "text-slate-300 hover:text-white"}`}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
