@@ -13,6 +13,8 @@ import {
 
 /** Punto de referencia: ~35% desde arriba del viewport (donde suele mirar el usuario). */
 const VIEWPORT_PROBE_RATIO = 0.35;
+/** Margen extra para no marcar "Sobre mí" mientras el hero sigue visible */
+const HERO_STICKY_BUFFER_PX = 100;
 
 export function getActiveSectionId(sectionIds: string[]): string {
   if (sectionIds.length === 0) return "";
@@ -26,9 +28,20 @@ export function getActiveSectionId(sectionIds: string[]): string {
   }
 
   const probe = vh * VIEWPORT_PROBE_RATIO;
+  const hero = document.getElementById("inicio");
+
+  // Mientras el bloque del hero (Hola, soy…) siga ocupando la pantalla, quedarse en Inicio
+  if (hero) {
+    const { bottom: heroBottom } = hero.getBoundingClientRect();
+    if (heroBottom > probe + HERO_STICKY_BUFFER_PX) {
+      return "inicio";
+    }
+  }
+
   let active = sectionIds[0];
 
   for (const id of sectionIds) {
+    if (id === "inicio") continue;
     const el = document.getElementById(id);
     if (!el) continue;
     const { top, bottom } = el.getBoundingClientRect();
